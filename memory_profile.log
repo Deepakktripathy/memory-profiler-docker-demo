@@ -1,0 +1,21 @@
+Filename: c:\Users\Deepak Tripathy\Desktop\vscode\docker-dem\main.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+     5     42.4 MiB     42.4 MiB           1   @profile(stream=open('memory_profile.log', 'w'))
+     6                                         def memory_operations_demo():
+     7     42.4 MiB      0.0 MiB           1       large_list = []
+     8                                             
+     9                                             # Operation 1: Appending elements
+    10     43.3 MiB      0.0 MiB       10001       for i in range(10_000):
+    11     43.3 MiB      0.9 MiB       10000           large_list.append(f"element_{i}_" + "x" * 10)  
+    12                                             
+    13                                             # Operation 2: Reading elements  
+    14     43.3 MiB      0.0 MiB           1       read_count = 0
+    15     43.3 MiB      0.0 MiB        5001       for i in range(5000):
+    16     43.3 MiB      0.0 MiB        5000           value = large_list[i]  # Read operation
+    17     43.3 MiB      0.0 MiB        5000           read_count += 1
+    18                                             
+    19     43.3 MiB      0.0 MiB           1       return len(large_list)
+
+
